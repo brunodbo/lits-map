@@ -1,0 +1,58 @@
+/* 
+ * Base partial: global imports, variables and the like.
+ */
+
+// Set up some variables.
+
+// Font stacks.
+$base-font-size:   14px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 1.45    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.67 * $base-font-size;
+
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Now create some variables for the font stacks we want to use on this site.
+$base-font-family: $tahoma; // The font family set on the html element.
+$font-monospace:   $courier;
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic);
+
+@mixin font-ubuntu() {
+  font-family: Ubuntu, $helvetica;
+  font-weight: 400;
+}
+
+@mixin font-ubuntu-bold() {
+  font-family: Ubuntu, $helvetica;
+  font-weight: 700;
+}
+
+@mixin font-ubuntu-italic() {
+  font-family: Ubuntu, $helvetica;
+  font-weight: 400;
+  font-style: italic;
+}
+
+//
+// Colors, etc.
+//
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 30px;
+
+// Imports.
+@import "compass/css3";
+@import "compass/typography/vertical_rhythm";
+@import "compass/utilities/general/clearfix";

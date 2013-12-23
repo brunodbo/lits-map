@@ -1,0 +1,1025 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic);
+/* 
+ * Main styles.
+ */
+/* HTML element (SMACSS base) rules */
+/**
+ * Normalize.css is intended to be used as an alternative to CSS resets.
+ *
+ * This file is a slight fork of these original sources:
+ * - normalize.css v2.1.2 | MIT License | git.io/normalize
+ * - normalize.scss v2.1.2 | MIT/GPLv2 License | bit.ly/normalize-with-compass
+ *
+ * It's suggested that you read the normalize.scss file and customise it to meet
+ * your needs, rather then including the file in your project and overriding the
+ * defaults later in your CSS.
+ * @see http://nicolasgallagher.com/about-normalize-css/
+ *
+ * Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+ *       @see http://snook.ca/archives/html_and_css/no_css_reset/
+ */
+/* Import Sass mixins, variables, Compass modules, etc. */
+/* 
+ * Base partial: global imports, variables and the like.
+ */
+/**
+ * HTML5 display definitions
+ */
+/* Correct `block` display not defined in IE 8/9. */
+/* line 35, ../sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 39, ../sass/_normalize.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Correct `inline-block` display not defined in IE 8/9. */
+/* line 46, ../sass/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 54, ../sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* Address styling not present in IE 8/9. */
+/* line 60, ../sass/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/**
+ * Base
+ *
+ * Instead of relying on the fonts that are available on a user's computer, you
+ * can use web fonts which, like images, are resources downloaded to the user's
+ * browser. Because of the bandwidth and rendering resources required, web fonts
+ * should be used with care.
+ *
+ * Numerous resources for web fonts can be found on Google. Here are a few
+ * websites where you can find Open Source fonts to download:
+ * - http://www.fontsquirrel.com/fontface
+ * - http://www.theleagueofmoveabletype.com
+ *
+ * In order to use these fonts, you will need to convert them into formats
+ * suitable for web fonts. We recommend the free-to-use Font Squirrel's
+ * Font-Face Generator:
+ *   http://www.fontsquirrel.com/fontface/generator
+ *
+ * The following is an example @font-face declaration. This font can then be
+ * used in any ruleset using a property like this:  font-family: Example, serif;
+ *
+ * Since we're using Sass, you'll need to declare your font faces here, then you
+ * can add them to the font variables in the _base.scss partial.
+ */
+/*
+@font-face {
+  font-family: 'Example';
+  src: url('../fonts/example.eot');
+  src: url('../fonts/example.eot?iefix') format('eot'),
+    url('../fonts/example.woff') format('woff'),
+    url('../fonts/example.ttf') format('truetype'),
+    url('../fonts/example.svg#webfontOkOndcij') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ */
+/* line 108, ../sass/_normalize.scss */
+html {
+  font-family: Ubuntu, Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-weight: 400;
+  font-size: 87.5%;
+  /* 3 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  color: #333;
+}
+
+/* Remove default margin. */
+/* line 120, ../sass/_normalize.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Links
+ *
+ * The order of link states are based on Eric Meyer's article:
+ * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+ */
+/* line 132, ../sass/_normalize.scss */
+a {
+  color: #333;
+  transition: color .1s, background-color .1s, border .1s;
+}
+
+/* line 143, ../sass/_normalize.scss */
+a:hover,
+a:focus,
+a:active {
+  color: #666;
+}
+
+/* Address `outline` inconsistency between Chrome and other browsers. */
+/* line 148, ../sass/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* Improve readability when focused and also mouse hovered in all browsers. */
+/* line 154, ../sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * Typography
+ *
+ * To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
+ * so that the line height of our base font becomes the basic unit of vertical
+ * measurement. We use multiples of that unit to set the top and bottom margins
+ * for our block level elements and to set the line heights of any fonts.
+ * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
+ */
+/* Set 1 unit of vertical rhythm on the top and bottom margin. */
+/* line 170, ../sass/_normalize.scss */
+p,
+pre {
+  margin: 1.71429em 0;
+}
+
+/* line 173, ../sass/_normalize.scss */
+p:first-child {
+  margin-top: 0.85714em;
+}
+
+/* line 176, ../sass/_normalize.scss */
+blockquote {
+  /* Also indent the quote on both sides. */
+  margin: 1.71429em 30px;
+}
+
+/* line 183, ../sass/_normalize.scss */
+h1, h2, h3, h4, h5, h6,
+strong,
+b {
+  font-family: Ubuntu, Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-weight: 700;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 191, ../sass/_normalize.scss */
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 1.45em;
+  line-height: 2.36453em;
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 1.18227em;
+  margin-bottom: 1.18227em;
+}
+
+/* line 199, ../sass/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 2.28571em;
+  margin-top: 1.14286em;
+  margin-bottom: 1.14286em;
+}
+
+/* line 204, ../sass/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  line-height: 1.4652em;
+  margin-top: 1.4652em;
+  margin-bottom: 1.4652em;
+}
+
+/* line 209, ../sass/_normalize.scss */
+h4 {
+  font-size: 1em;
+  line-height: 1.71429em;
+  margin-top: 1.71429em;
+  margin-bottom: 1.71429em;
+}
+
+/* line 214, ../sass/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  line-height: 2.0654em;
+  margin-top: 2.0654em;
+  margin-bottom: 2.0654em;
+}
+
+/* line 219, ../sass/_normalize.scss */
+h6 {
+  font-size: 0.67em;
+  line-height: 2.55864em;
+  margin-top: 2.55864em;
+  margin-bottom: 2.55864em;
+}
+
+/* Address styling not present in IE 8/9, Safari 5, and Chrome. */
+/* line 226, ../sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* Address styling not present in Safari 5 and Chrome. */
+/* line 233, ../sass/_normalize.scss */
+dfn,
+em,
+i {
+  font-family: Ubuntu, Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Address differences between Firefox and other browsers. */
+/* line 238, ../sass/_normalize.scss */
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  border: 1px solid #666;
+  padding-bottom: -1px;
+  margin: 1.71429em 0;
+}
+
+/* Address styling not present in IE 8/9. */
+/* line 247, ../sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* Correct font family set oddly in Safari 5 and Chrome. */
+/* line 258, ../sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+  font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+  line-height: 1.71429em;
+}
+
+/* Improve readability of pre-formatted text in all browsers. */
+/* line 267, ../sass/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Set consistent quote types. */
+/* line 279, ../sass/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* Address inconsistent and variable font size in all browsers. */
+/* line 284, ../sass/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+/* line 290, ../sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 296, ../sass/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 299, ../sass/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/**
+ * Lists
+ */
+/* line 309, ../sass/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  /* Address margins set differently in IE 6/7. */
+  margin: 1.71429em 0;
+}
+
+/* line 316, ../sass/_normalize.scss */
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  /* Turn off margins on nested lists. */
+  margin: 0;
+}
+
+/* line 321, ../sass/_normalize.scss */
+dd {
+  margin: 0 0 0 30px;
+  /* LTR */
+}
+
+/* Address paddings set differently in IE 6/7. */
+/* line 328, ../sass/_normalize.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 30px;
+  /* LTR */
+}
+
+/* Correct list images handled incorrectly in IE 7. */
+/* line 335, ../sass/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/**
+ * Embedded content and figures
+ *
+ * @todo Look into adding responsive embedded video.
+ */
+/* line 346, ../sass/_normalize.scss */
+img {
+  /* Remove border when inside `a` element in IE 8/9. */
+  border: 0;
+  /* Improve image quality when scaled in IE 7. */
+  -ms-interpolation-mode: bicubic;
+  /* Suppress the space beneath the baseline */
+  /* vertical-align: bottom; */
+  /* Responsive images */
+  max-width: 100%;
+  height: auto;
+  /* Correct IE 8 not scaling image height when resized. */
+  width: auto;
+}
+
+/* Correct overflow displayed oddly in IE 9. */
+/* line 367, ../sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Address margin not present in IE 8/9 and Safari 5. */
+/* line 372, ../sass/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/**
+ * Forms
+ */
+/* Correct margin displayed oddly in IE 6/7. */
+/* line 382, ../sass/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/* Define consistent border, margin, and padding. */
+/* line 388, ../sass/_normalize.scss */
+fieldset {
+  margin: 0 2px;
+  /* Apply borders and padding that keep the vertical rhythm. */
+  border-color: #c0c0c0;
+  border-top-style: solid;
+  border-top-width: 0.07143em;
+  padding-top: 0.52857em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.07143em;
+  padding-bottom: 1.04286em;
+  border-left-style: solid;
+  border-left-width: 0.07143em;
+  padding-left: 1.04286em;
+  border-right-style: solid;
+  border-right-width: 0.07143em;
+  padding-right: 1.04286em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+/* line 403, ../sass/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+  /* LTR */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 4. Improve appearance and consistency with IE 6/7.
+ * 5. Keep form elements constrained in their containers.
+ */
+/* line 421, ../sass/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  vertical-align: baseline;
+  /* 4 */
+  *vertical-align: middle;
+  /* 4 */
+  max-width: 100%;
+  /* 5 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 438, ../sass/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 449, ../sass/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 465, ../sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 477, ../sass/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 488, ../sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 502, ../sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 512, ../sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Remove inner padding and border in Firefox 4+. */
+/* line 518, ../sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 527, ../sass/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* Form labels. */
+/* line 533, ../sass/_normalize.scss */
+label {
+  display: block;
+  font-weight: bold;
+}
+
+/**
+ * Tables
+ */
+/* line 541, ../sass/_normalize.scss */
+table {
+  /* Remove most spacing between table cells. */
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* Prevent cramped-looking tables */
+  /* width: 100%; */
+  /* Add vertical rhythm margins. */
+  margin-top: 1.71429em;
+  margin-bottom: 1.71429em;
+}
+
+/* Body */
+/* line 10, ../sass/style.scss */
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+
+/* line 16, ../sass/style.scss */
+html {
+  height: 100%;
+}
+
+/* line 20, ../sass/style.scss */
+.btn {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* Social links */
+/* line 34, ../sass/style.scss */
+#share ul {
+  margin: 0px;
+}
+/* line 37, ../sass/style.scss */
+#share li {
+  list-style: none;
+}
+
+/* Map */
+/* line 44, ../sass/style.scss */
+#map {
+  position: absolute;
+  /*float: left;*/
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 7;
+}
+
+/* Sidebar */
+/* line 55, ../sass/style.scss */
+#sidebar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30%;
+  max-height: 60%;
+  z-index: 10;
+  overflow-y: scroll;
+}
+
+/* line 65, ../sass/style.scss */
+.sidebar-inner {
+  padding: 10px;
+}
+
+/* line 69, ../sass/style.scss */
+.sidebar-title {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+/* line 75, ../sass/style.scss */
+#sidebar,
+.map-legend {
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  background-color: rgba(153, 153, 153, 0.95);
+  color: white;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* line 84, ../sass/style.scss */
+.more-info-title {
+  margin-bottom: 0;
+}
+
+/* line 88, ../sass/style.scss */
+.more-info-list {
+  margin-top: 0;
+}
+
+/* Pop-up information */
+/* line 94, ../sass/style.scss */
+.popup_box_header {
+  font-size: 16px;
+}
+
+/* line 99, ../sass/style.scss */
+.leaflet-popup .popup-title {
+  margin-bottom: 0;
+}
+/* line 102, ../sass/style.scss */
+.leaflet-popup p {
+  margin: 0;
+}
+
+/* Credits */
+/* line 109, ../sass/style.scss */
+.credits {
+  font-size: 9px;
+}
+
+/* 'About this map' button, description box */
+/* Mobile only */
+/* line 116, ../sass/style.scss */
+.toggle_description {
+  display: none;
+  z-index: 9;
+  position: relative;
+  float: right;
+  right: 0%;
+  top: 0%;
+}
+
+/* line 125, ../sass/style.scss */
+.description_box_cover {
+  display: none;
+  z-index: 12;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  background-color: rgba(33, 33, 33, 0.9);
+}
+
+/* line 136, ../sass/style.scss */
+.description_box {
+  position: absolute;
+  display: none;
+  z-index: 13;
+  height: 96%;
+  width: 96%;
+  left: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  top: 1%;
+  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #999;
+}
+/* line 150, ../sass/style.scss */
+.description_box h3 {
+  padding-bottom: 0px;
+  line-height: 15px;
+}
+
+/* line 156, ../sass/style.scss */
+.description_box_content {
+  width: 96%;
+  height: 80%;
+  position: fixed;
+  overflow: auto;
+}
+
+/* line 163, ../sass/style.scss */
+.x_button {
+  width: 15px;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 700px) {
+  /* line 169, ../sass/style.scss */
+  h2 {
+    font-size: 24px;
+  }
+
+  /* line 172, ../sass/style.scss */
+  h3 {
+    font-size: 18px;
+  }
+
+  /* line 175, ../sass/style.scss */
+  p {
+    font-size: 13px;
+  }
+}
+/* Styles from mobile devices */
+@media (max-width: 625px) {
+  /* Headers */
+  /* line 183, ../sass/style.scss */
+  h1, h2, h3 {
+    line-height: 20px;
+  }
+
+  /* Map */
+  /* line 187, ../sass/style.scss */
+  #map {
+    cursor: default;
+    border: 0px solid #737373;
+    top: 0%;
+    bottom: 0%;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Social buttons */
+  /* line 196, ../sass/style.scss */
+  #share {
+    display: none;
+  }
+
+  /* Sidebar */
+  /* line 200, ../sass/style.scss */
+  #sidebar {
+    position: relative;
+    border-width: 0 0 1px;
+    border-bottom: 1px solid #FFFFFF;
+    margin-top: 0%;
+    float: left;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 96%;
+    height: auto;
+  }
+  /* line 213, ../sass/style.scss */
+  #sidebar h3 {
+    line-height: 15px;
+    font-size: 20px;
+  }
+
+  /* line 218, ../sass/style.scss */
+  .sidebar_content {
+    display: none;
+  }
+
+  /* line 221, ../sass/style.scss */
+  .description_box_header h3 {
+    line-height: 25px;
+  }
+
+  /* line 224, ../sass/style.scss */
+  .toggle_description {
+    display: inline;
+  }
+
+  /* Leaflet controls */
+  /* line 228, ../sass/style.scss */
+  .leaflet-top {
+    margin-top: 55px;
+  }
+
+  /* line 231, ../sass/style.scss */
+  .leaflet-right {
+    display: none;
+  }
+
+  /* line 235, ../sass/style.scss */
+  .leaflet-container .leaflet-control-attribution, .leaflet-container .leaflet-control-scale {
+    font-size: 10px;
+  }
+
+  /* line 239, ../sass/style.scss */
+  .leaflet-bar {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+  }
+}
+/* Special attributes for small, wide screens */
+@media (max-height: 500px) {
+  /* line 246, ../sass/style.scss */
+  #scroll_more {
+    display: block;
+  }
+
+  /* line 249, ../sass/style.scss */
+  .sidebar_content {
+    height: 60%;
+  }
+
+  /* line 252, ../sass/style.scss */
+  .description_box_content {
+    height: 75%;
+  }
+}
+@media (max-height: 400px) {
+  /* line 258, ../sass/style.scss */
+  #scroll_more {
+    display: block;
+  }
+
+  /* line 261, ../sass/style.scss */
+  .sidebar_content {
+    height: 60%;
+  }
+
+  /* line 264, ../sass/style.scss */
+  .description_box_content {
+    height: 75%;
+  }
+}
+@media (max-height: 320px) {
+  /* line 270, ../sass/style.scss */
+  .sidebar_content {
+    height: 40%;
+  }
+
+  /* line 273, ../sass/style.scss */
+  .description_box_content {
+    height: 65%;
+  }
+}
+/* line 278, ../sass/style.scss */
+.leaflet-bottom {
+  width: 30%;
+}
+/* line 280, ../sass/style.scss */
+.leaflet-bottom .map-legends {
+  width: 100%;
+  font-size: 0.85em;
+}
+
+/* line 286, ../sass/style.scss */
+.leaflet-container {
+  font-family: Ubuntu, Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+/* line 289, ../sass/style.scss */
+.leaflet-container h5 {
+  margin-bottom: 0;
+}
+
+/* line 295, ../sass/style.scss */
+.map-legend {
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+
+/* line 298, ../sass/style.scss */
+.legend-title {
+  margin: 0;
+}
+
+/* line 302, ../sass/style.scss */
+.legend-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 308, ../sass/style.scss */
+.legend-icon {
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: 5px;
+  width: 10px;
+  height: 10px;
+}
+
+/* line 317, ../sass/style.scss */
+.legend-risk .legend-icon {
+  background: url(../img/marker_sm.png) no-repeat left top;
+  height: 30px;
+  width: 20px;
+  margin-left: 0;
+  margin-right: 10px;
+}
+/* line 324, ../sass/style.scss */
+.legend-risk .legend-label {
+  vertical-align: top;
+}
+
+/* line 329, ../sass/style.scss */
+.legend-route .legend-icon {
+  background-color: #122128;
+}
+
+/* line 333, ../sass/style.scss */
+.legend-park .legend-icon {
+  background-color: #19851c;
+}
+
+/* line 337, ../sass/style.scss */
+.marker-title {
+  font-size: 16.38px;
+}
