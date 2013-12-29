@@ -1,4 +1,4 @@
-Line In The Sand interviews
+Line In The Sand map
 ===============
 
-Mapping Line In The Sand interviews (lineinthesand.ca)
+Mapping Line In The Sand (lineinthesand.ca)
