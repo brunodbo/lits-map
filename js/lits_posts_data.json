@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+
+{ "type": "Feature", "properties": { "title": "Expect Resistance", "teaser": "", "teaser_img_url": "http://www.lineinthesand.ca/wp-content/uploads/2013/12/Unistoten-960x612.jpg", "post_url": "http://www.lineinthesand.ca/2013/12/expect-resistance-unistoten-territory/", "location_name": "Unist’ot’en territory" }, "geometry": {"type": "Point", "coordinates":[-126.661916457421,54.3988341]} },
+{ "type": "Feature", "properties": { "title": "The answer is still no", "teaser": "", "teaser_img_url": "http://www.lineinthesand.ca/wp-content/uploads/2013/11/Rally-Terrace-2-960x637.jpeg", "post_url": "http://www.lineinthesand.ca/2013/11/answer-still-terrace-bc/", "location_name": "Terrace" }, "geometry": {"type": "Point", "coordinates":[-128.6060566,54.5205722]} },
+{ "type": "Feature", "properties": { "title": "A frostbitten paradise", "teaser": "", "teaser_img_url": "http://www.lineinthesand.ca/wp-content/uploads/2013/11/Maurice-river-1-960x535.jpg", "post_url": "http://www.lineinthesand.ca/2013/11/frostbitten-paradise-morice-river-bc/", "location_name": "Morice River" }, "geometry": {"type": "Point", "coordinates":[-126.7626956035,54.3735691]} },
+{ "type": "Feature", "properties": { "title": "Out of sight, out of mind", "teaser": "", "teaser_img_url": "http://www.lineinthesand.ca/wp-content/uploads/2013/11/Del_1-960x636.jpeg", "post_url": "http://www.lineinthesand.ca/2013/11/sight-mind-fort-st-james-bc/", "location_name": "Fort St. James" }, "geometry": {"type": "Point", "coordinates":[-124.231974288872,54.4678211]} }
+
+]
+}
