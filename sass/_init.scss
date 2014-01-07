@@ -5,10 +5,11 @@
 // Set up some variables.
 
 // Font stacks.
-$base-font-size:   14px; // The font size set on the root html element.
+$base-font-size: 14px; // The font size set on the root html element.
+$base-font-size-value: 14; // Used in font-size calculation functions.
 $base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
 
-$h1-font-size: 1.45    * $base-font-size;
+$h1-font-size: 1.45 * $base-font-size;
 $h2-font-size: 1.5  * $base-font-size;
 $h3-font-size: 1.17 * $base-font-size;
 $h4-font-size: 1    * $base-font-size;
@@ -34,11 +35,13 @@ $font-monospace:   $courier;
 
 $green:       #7ab86f;
 $green-dark:  darken(#7ab86f, 15%);
+$gray-dark:   #333333;
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
 
 // Imports.
+@import "functions";
 @import "compass/css3";
 @import "compass/typography/vertical_rhythm";
 @import "compass/utilities/general/clearfix";
