@@ -12,7 +12,7 @@ $(function() {
 
   function markerPopup(feature) {
     var popupContent = '<img class="teaser-img" src="' + feature.properties.teaser_img_url + '" />'
-      + '<h2>' + feature.properties.title + ', ' + feature.properties.location_name + '</h2>'
+      + '<h2>' + feature.properties.title + '</h2>'
       + '<p>' + '<a class="more-link" target="_blank" href="' + ' ' + feature.properties.post_url + '">Read post</a></p>';
 
       return popupContent;
