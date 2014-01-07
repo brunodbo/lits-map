@@ -96,17 +96,19 @@ html {
 }
 
 .leaflet-popup {
-  .popup-title {
+  .post-title {
+    font-size: em(18);
     margin-bottom: 0;
+    a:link,
+    a:visited {
+      color: $gray-dark;
+    }
   }
-  .teaser-img {
+  .post-img {
     max-width: 100% !important; // Overriding Leaflet.
   }
   p {
     margin: 0;
-  }
-  .more-link {
-    font-weight: bold;
   }
 }
 
