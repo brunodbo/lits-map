@@ -1,0 +1,8 @@
+////////////////////////
+// Functions Partials
+//
+// All of your functions should go in this file.
+////////////////////////
+@function em($desired-pixel-value, $default-font-size: $base-font-size-value) {
+  @return #{$desired-pixel-value/$base-font-size-value}em;
+}
