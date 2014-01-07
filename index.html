@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <head>
-	<title>Line In The Sand Interviews</title>
+	<title>Line In The Sand Map</title>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -14,7 +14,7 @@
 	<meta http-equiv="cleartype" content="on">
 
 	<!-- Facebook meta tags-->
-	<meta property="og:title" content="Line In The Sand Interviews"/>
+	<meta property="og:title" content="Line In The Sand Map"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:url" content="@TODO"/>
 	<meta property="og:image" content="@TODO"/>
@@ -23,19 +23,21 @@
 
 	<!-- Twitter meta tags -->
 	<meta property="twitter:site" content="@TODO">
-	<meta property="twitter:card" content="Line In The Sand Interviews">
+	<meta property="twitter:card" content="Line In The Sand Map">
 	<meta property="twitter:url" content="@TODO">
-	<meta property="twitter:title" content="Line In The Sand Interviews">
+	<meta property="twitter:title" content="Line In The Sand Map">
 	<meta property="twitter:description" content="@TODO">
 	<meta property="twitter:image" content="@TODO">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="http://api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.css" />
+	<link rel="stylesheet" href="//api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css" />
 
   <!-- Javascript -->
-  <script type="text/javascript" src="http://api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.js"></script>
-  <script type="text/javascript" src="js/vendor/jquery/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="//api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
 </head>
 <body>
 
@@ -46,11 +48,12 @@
 	</noscript>
 
 	<aside id="sidebar">
-    <div class="sidebar-inner">
-			<h1 class="sidebar-title">Line In The Sand interviews</h1>
-
-  		<div class="sidebar-content">
-  			<p>This is the sidebar, video and text will go here.</p>
+    <div id="sidebar-inner">
+  		<div id="sidebar-content">
+        <figure>
+            <img src="../img/lits_logo.png" alt="Line In The Sand logo" />
+        </figure>
+  			<p>Line In The Sand is a collaborative multimedia project which aims to convey the nuanced opinions and personal stories of individuals living along the route of the proposed Northern Gateway pipeline. Begun in the summer of 2012, we have travelled from Bruderheim, Alberta, to Kitimat, British Columbia, collecting testimonies from countless Canadians whose land, livelihoods, and cultures could be profoundly impacted by the approval and construction of the Northern Gateway.</p>
     	</div>
     </div>
 	</aside>
@@ -58,6 +61,8 @@
 	<div id="map">
 	</div>
 
-  <script src="js/script.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/lits_posts.js"></script>
+  <script src="js/pipeline.js"></script>
 </body>
 </html>

@@ -18,36 +18,22 @@ $h6-font-size: 0.67 * $base-font-size;
 $georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$helvetica-neue:  "Helvetica Neue", $helvetica;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $tahoma; // The font family set on the html element.
+$base-font-family: $helvetica-neue; // The font family set on the html element.
 $font-monospace:   $courier;
-
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic);
-
-@mixin font-ubuntu() {
-  font-family: Ubuntu, $helvetica;
-  font-weight: 400;
-}
-
-@mixin font-ubuntu-bold() {
-  font-family: Ubuntu, $helvetica;
-  font-weight: 700;
-}
-
-@mixin font-ubuntu-italic() {
-  font-family: Ubuntu, $helvetica;
-  font-weight: 400;
-  font-style: italic;
-}
 
 //
 // Colors, etc.
 //
+
+$green:       #7ab86f;
+$green-dark:  darken(#7ab86f, 15%);
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;

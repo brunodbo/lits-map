@@ -106,14 +106,13 @@ audio:not([controls]) {
  *    `em` units.
  */
 html {
-  @include font-ubuntu;
-  // font-family: $base-font-family; /* 1 */
+  font-family: $base-font-family; /* 1 */
   font-size: 100% * ($base-font-size / 16px); /* 3 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   color: #333;
   // Establish a vertical rhythm unit using $base-line-height.
-  // @include adjust-leading-to(1);
+  @include adjust-leading-to(.9);
 }
 
 /* Remove default margin. */
@@ -129,19 +128,21 @@ body {
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
 
-a {
-  color: #333;
-  transition: color .1s, background-color .1s, border .1s;
+a,
+.leaflet-container a {
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green-dark;
+  }  
 }
 
-a:link {
-}
-a:visited {
-}
-a:hover,
-a:focus,
-a:active {
-  color: #666;
+a,i {
+  transition: color .1s, background-color .1s, border .1s;
 }
 
 /* Address `outline` inconsistency between Chrome and other browsers. */
@@ -181,7 +182,7 @@ blockquote {
 h1,h2,h3,h4,h5,h6,
 strong,
 b {
-  @include font-ubuntu-bold;
+  // @include font-ubuntu-bold;
 }
 
 /**
@@ -231,7 +232,7 @@ abbr[title] {
 dfn,
 em,
 i {
-  @include font-ubuntu-italic;
+  font-family: $base-font-family;
 }
 
 /* Address differences between Firefox and other browsers. */

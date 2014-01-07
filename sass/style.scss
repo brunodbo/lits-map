@@ -57,12 +57,12 @@ html {
   top: 10px;
   right: 10px;
   width: 30%;
-  max-height: 60%;
+  // max-height: 60%;
   z-index: 10;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
-.sidebar-inner {
+#sidebar-inner {
   padding: 10px;
 }
 
@@ -99,8 +99,14 @@ html {
   .popup-title {
     margin-bottom: 0;
   }
+  .teaser-img {
+    max-width: 100% !important; // Overriding Leaflet.
+  }
   p {
     margin: 0;
+  }
+  .more-link {
+    font-weight: bold;
   }
 }
 
@@ -284,7 +290,6 @@ html {
 }
 
 .leaflet-container {
-  @include font-ubuntu;
   color: #333;
   h5 {
     margin-bottom: 0;
@@ -336,4 +341,38 @@ html {
 
 .marker-title {
   font-size: $h3-font-size;
+}
+
+#posts-nav {
+  text-align: center;
+  ul {
+    @include clearfix;
+    padding-left: 0;
+  }
+  li {
+    display: inline-block;
+  }
+ 
+  i {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $green;
+      cursor: pointer;
+    }
+  }
+}
+
+#posts-nav-prev {
+  margin-right: 10px;
+}
+
+#posts-nav-next {
+  margin-left: 10px;
+}
+
+.small-note {
+  font-size: .9em;
+  font-style: italic;  
 }
