@@ -63,6 +63,12 @@ $(function() {
       map.on('moveend', function(event) {
         markers[i].openPopup();
       });
+      if ($('#posts-nav-next').hasClass('active')) {
+        $('#posts-nav-next').removeClass('active');
+      }
+      if ($('#posts-nav-prev').hasClass('active')) {
+        $('#posts-nav-prev').removeClass('active');
+      }
     }
 
     // User interaction with this layer.
@@ -70,16 +76,10 @@ $(function() {
       if (event.keyCode == 37) {
         navigate(markers[--i], true);
         $('#posts-nav-prev').addClass('active');
-        if ($('#posts-nav-next').hasClass('active')) {
-          $('#posts-nav-next').removeClass('active');
-        }
       }
       if (event.keyCode == 39) {
         navigate(markers[++i], true);
         $('#posts-nav-next').addClass('active');
-        if ($('#posts-nav-prev').hasClass('active')) {
-          $('#posts-nav-prev').removeClass('active');
-        }
       }
     });
     $('#posts-nav-prev').click(function() {
