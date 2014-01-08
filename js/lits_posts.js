@@ -9,7 +9,6 @@ $(function() {
     return true;
   }
 
-
   function markerPopup(feature) {
     var popupContent = '<a target="_blank" href="' + ' ' + feature.properties.post_url + '"><img class="post-img" src="' + feature.properties.teaser_img_url + '" /></a>'
       + '<h2 class="post-title"><a target="_blank" href="' + ' ' + feature.properties.post_url + '">' + feature.properties.title + '</a></h2>'
@@ -41,9 +40,11 @@ $(function() {
     cycle(markers);
   });
 
+  
   // Add prev/next navigation to sidebar.
+  var postsNav = '<nav id="posts-nav"><ul><li><i id="posts-nav-prev" class="fa fa-arrow-left fa-4x"></i></li><li><i id="posts-nav-next" class="fa fa-arrow-right fa-4x"></i></li></ul><p class="small-note">You can also use the left/right arrow keys.</p></nav>';
   (function() {
-    $('#sidebar-inner').append('<nav id="posts-nav"><ul><li><i id="posts-nav-prev" class="fa fa-arrow-left fa-4x"></i></li><li><i id="posts-nav-next" class="fa fa-arrow-right fa-4x"></i></li></ul><p class="small-note">You can also use the left/right arrow keys.</p></nav>');
+    $('#sidebar-inner').append(postsNav);
   })();
 
   function cycle(markers) {
@@ -59,8 +60,12 @@ $(function() {
       //   map.ease.location(markers[i].location).zoom(markers[i].data.properties.zoom||8).optimal(0.5, 1.00);
       // }
 
-      markers[i].openPopup();
+      map.on('moveend', function(event) {
+        markers[i].openPopup();
+      });
     }
+
+    // User interaction with this layer.
     $(document).keydown(function(event) {
       if (event.keyCode == 37) {
         navigate(markers[--i], true);
@@ -84,4 +89,18 @@ $(function() {
       navigate(markers[++i], true);
     });
   }
+
+  // Add posts layer to layer control.
+  layerControl.addOverlay(posts, 'Blog posts');
+  map.on('overlayremove', function(event) {
+    if (event.name == 'Blog posts') {
+      $('#posts-nav').hide();
+    }
+  })
+  map.on('overlayadd', function(event) {
+    if (event.name == 'Blog posts') {
+      $('#posts-nav').show();
+    }
+  })
 });
+
