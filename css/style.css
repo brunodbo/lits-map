@@ -1047,12 +1047,12 @@ html {
 }
 
 /* line 369, ../sass/style.scss */
-#posts-nav-prev {
+#posts-nav-left {
   margin-right: 10px;
 }
 
 /* line 373, ../sass/style.scss */
-#posts-nav-next {
+#posts-nav-right {
   margin-left: 10px;
 }
 
