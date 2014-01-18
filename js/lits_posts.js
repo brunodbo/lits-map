@@ -63,9 +63,13 @@ $(function() {
       //   map.ease.location(markers[i].location).zoom(markers[i].data.properties.zoom||8).optimal(0.5, 1.00);
       // }
 
-      map.on('moveend', function(event) {
+      function showPopup() {
         markers[i].openPopup();
-      });
+      }
+
+      map.on('moveend', showPopup);
+      map.off(showPopup);
+      
       if ($('#posts-nav-next').hasClass('active')) {
         $('#posts-nav-next').removeClass('active');
       }
