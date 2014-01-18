@@ -67,8 +67,23 @@ $(function() {
         markers[i].openPopup();
       }
 
-      map.on('moveend', showPopup);
-      map.off(showPopup);
+      // map.on('moveend', showPopup);
+      // map.off('moveend', showPopup);
+
+      // map.on('moveend', function(event) {
+      //   showPopup();
+      //   // console.log(map);
+      //   // this.off('moveend', showPopup);
+      //   // this.off(event);
+      // });
+
+      map.once('viewreset', function(event) {
+        showPopup();
+      });
+
+      map.once('moveend', function(event) {
+        showPopup();
+      });
       
       if ($('#posts-nav-right').hasClass('active')) {
         $('#posts-nav-right').removeClass('active');
