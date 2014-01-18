@@ -45,7 +45,7 @@ $(function() {
 
   
   // Add prev/next navigation to sidebar.
-  var postsNav = '<nav id="posts-nav"><ul><li><i id="posts-nav-prev" class="fa fa-arrow-left fa-4x"></i></li><li><i id="posts-nav-next" class="fa fa-arrow-right fa-4x"></i></li></ul><p class="small-note">You can also use the left/right arrow keys.</p></nav>';
+  var postsNav = '<nav id="posts-nav"><ul><li><i id="posts-nav-left" class="fa fa-arrow-left fa-4x"></i></li><li><i id="posts-nav-right" class="fa fa-arrow-right fa-4x"></i></li></ul><p class="small-note">You can also use the left/right arrow keys.</p></nav>';
   (function() {
     $('#sidebar-inner').append(postsNav);
   })();
@@ -70,30 +70,31 @@ $(function() {
       map.on('moveend', showPopup);
       map.off(showPopup);
       
-      if ($('#posts-nav-next').hasClass('active')) {
-        $('#posts-nav-next').removeClass('active');
+      if ($('#posts-nav-right').hasClass('active')) {
+        $('#posts-nav-right').removeClass('active');
       }
-      if ($('#posts-nav-prev').hasClass('active')) {
-        $('#posts-nav-prev').removeClass('active');
+      if ($('#posts-nav-left').hasClass('active')) {
+        $('#posts-nav-left').removeClass('active');
       }
     }
 
     // User interaction with this layer.
+    // Left arrow goes east (next chronologically), right arrow goes west (previous chronologically).
     $(document).keydown(function(event) {
       if (event.keyCode == 37) {
-        navigate(markers[--i], true);
-        $('#posts-nav-prev').addClass('active');
+        navigate(markers[++i], true);
+        $('#posts-nav-left').addClass('active');
       }
       if (event.keyCode == 39) {
-        navigate(markers[++i], true);
-        $('#posts-nav-next').addClass('active');
+        navigate(markers[--i], true);
+        $('#posts-nav-right').addClass('active');
       }
     });
-    $('#posts-nav-prev').click(function() {
-      navigate(markers[--i], true);
-    });
-    $('#posts-nav-next').click(function() {
+    $('#posts-nav-left').click(function() {
       navigate(markers[++i], true);
+    });
+    $('#posts-nav-right').click(function() {
+      navigate(markers[--i], true);
     });
   }
 
