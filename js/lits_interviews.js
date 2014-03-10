@@ -1,7 +1,7 @@
 $(function() {
 
   'use strict';
-  
+
   // var videoPlayer = function(posterImg, fileWebm) {
   //   var player = '<video width="175" height="175" poster="' + posterImg + '" preload="none"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + fileWebm + '" /></video>';
 
@@ -20,7 +20,7 @@ $(function() {
       iconSize: [60, 60],
       iconAnchor: [30, 30],
       className: 'marker-wrapper',
-      html: '<div class="marker-inner-wrapper"><img class="interview-thumb interview-marker" src="' + feature.properties.iconUrl + '" /><video id="player" class="interview-video player" width="175" height="175" poster="' + feature.properties.posterImg + '" preload="auto"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + feature.properties.fileWebm + '" /></video><i class="fa fa-play"></i></div>'
+      html: '<div class="marker-inner-wrapper"><img class="interview-thumb interview-marker" src="../' + feature.properties.iconUrl + '" /><video id="player" class="interview-video player" width="175" height="175" poster="../' + feature.properties.posterImg + '" preload="auto"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="../' + feature.properties.fileWebm + '" /></video><i class="fa fa-play"></i></div>'
       // html: '<div class="marker-inner-wrapper"><video id="player" width="175" height="175" poster="' + feature.properties.posterImg + '" preload="none"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + feature.properties.fileWebm + '" /></video></div>'
       // html: '<div class="marker-inner-wrapper"><img class="interview-marker" src="' + feature.properties.iconUrl + '" /><i class="fa fa-play"></i>' + '<video width="175" height="175" poster="' + feature.properties.posterImg + '" preload="none"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + feature.properties.fileWebm + '" /></video></div>'
     }));
@@ -29,14 +29,14 @@ $(function() {
   interviews.on('ready', function(e) {
     var markers = [],
         feature,
-        player = new MediaElementPlayer('#player', { 
+        player = new MediaElementPlayer('#player', {
           loop: true,
           enableKeyboard: false,
           startVolume: 0
         });
 
-    
-    this.eachLayer(function(marker) { 
+
+    this.eachLayer(function(marker) {
       markers.push(marker);
       feature = marker.feature;
     });
@@ -68,7 +68,7 @@ $(function() {
       type: 'iframe'
     });
   });
-  
+
   // Add prev/next navigation to sidebar.
   var interviewsNav = '<nav id="interviews-nav"><ul><li><i id="interviews-nav-left" class="fa fa-arrow-left fa-4x"></i></li><li><i id="interviews-nav-right" class="fa fa-arrow-right fa-4x"></i></li></ul><p class="small-note">You can also use the left/right arrow keys.</p></nav>';
   (function() {
@@ -79,7 +79,7 @@ $(function() {
     var i = -1;
     function navigate(marker, ease) {
       if (i > markers.length - 1) i = 0; // Looping forward.
-      if (i < 0) i = markers.length - 1; // Looping backwards. 
+      if (i < 0) i = markers.length - 1; // Looping backwards.
       map.setView(markers[i].getLatLng(), 8);
 
       function showPopup() {
@@ -93,7 +93,7 @@ $(function() {
       map.once('moveend', function(event) {
         showPopup();
       });
-      
+
       if ($('#interviews-nav-right').hasClass('active')) {
         $('#interviews-nav-right').removeClass('active');
       }
