@@ -1,6 +1,12 @@
 $(function() {
 
   'use strict';
+  
+  // var videoPlayer = function(posterImg, fileWebm) {
+  //   var player = '<video width="175" height="175" poster="' + posterImg + '" preload="none"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + fileWebm + '" /></video>';
+
+  //   return player;
+  // }
 
   var interviews = L.mapbox.markerLayer().addTo(map);
   interviews.loadURL('js/lits_interviews_data.json');
@@ -8,18 +14,28 @@ $(function() {
   interviews.on('layeradd', function(e) {
     var marker = e.layer,
       feature = marker.feature;
+      // videoPlayer = videoPlayer(feature.properties.posterImg, feature.properties.fileWebm);
     marker.unbindPopup(marker._popup);
     marker.setIcon(L.divIcon({
       iconSize: [60, 60],
       iconAnchor: [30, 30],
       className: 'marker-wrapper',
-      html: '<div class="marker-inner-wrapper"><img class="interview-marker" src="' + feature.properties.iconUrl + '" /><i class="fa fa-play"></i></div>'
+      html: '<div class="marker-inner-wrapper"><img class="interview-thumb interview-marker" src="' + feature.properties.iconUrl + '" /><video id="player" class="interview-video player" width="175" height="175" poster="' + feature.properties.posterImg + '" preload="auto"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + feature.properties.fileWebm + '" /></video><i class="fa fa-play"></i></div>'
+      // html: '<div class="marker-inner-wrapper"><video id="player" width="175" height="175" poster="' + feature.properties.posterImg + '" preload="none"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + feature.properties.fileWebm + '" /></video></div>'
+      // html: '<div class="marker-inner-wrapper"><img class="interview-marker" src="' + feature.properties.iconUrl + '" /><i class="fa fa-play"></i>' + '<video width="175" height="175" poster="' + feature.properties.posterImg + '" preload="none"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + feature.properties.fileWebm + '" /></video></div>'
     }));
   });
 
   interviews.on('ready', function(e) {
     var markers = [],
-        feature;
+        feature,
+        player = new MediaElementPlayer('#player', { 
+          loop: true,
+          enableKeyboard: false,
+          startVolume: 0
+        });
+
+    
     this.eachLayer(function(marker) { 
       markers.push(marker);
       feature = marker.feature;
@@ -28,11 +44,21 @@ $(function() {
     $('.marker-wrapper').mouseenter(function() {
       $(this).css('margin-left', -75);
       $(this).css('margin-top', -75);
-      $(this).find('.interview-marker').attr('src', feature.properties.iconGifUrl);
+      // player.setSrc(feature.properties.fileWebm);
+      player.play();
+
+      $(this).find('.interview-thumb').hide();
+      $(this).find('.player').show();
+      $(this).find('.fa-play').show().css('z-index', 999);
+      // $(this).find('.interview-marker').attr('src', feature.properties.iconGifUrl);
       $(this).mouseleave(function() {
         $(this).css('margin-left', -30);
         $(this).css('margin-top', -30);
-        $(this).find('.interview-marker').attr('src', feature.properties.iconUrl);
+        $(this).find('.interview-thumb').show();
+        $(this).find('.player').hide();
+        $(this).find('.fa-play').hide();
+        player.pause();
+        // $(this).find('.interview-marker').attr('src', feature.properties.iconUrl);
       });
     });
     $('.fa-play').magnificPopup({

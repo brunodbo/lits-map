@@ -1611,17 +1611,17 @@ html {
 /* line 400, ../sass/style.scss */
 .marker-wrapper:hover .fa-play, .marker-wrapper:focus .fa-play, .marker-wrapper:active .fa-play {
   display: block;
-  z-index: 300;
+  z-index: 999;
   color: white;
   opacity: .6;
 }
 
-/* line 409, ../sass/style.scss */
+/* line 410, ../sass/style.scss */
 .marker-inner-wrapper {
   position: relative;
 }
 
-/* line 415, ../sass/style.scss */
+/* line 416, ../sass/style.scss */
 .marker-inner-wrapper,
 .interview-marker,
 .fa-play {
@@ -1629,13 +1629,25 @@ html {
   height: 100%;
 }
 
-/* line 420, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 .fa-play {
   position: absolute;
   top: 0;
   left: 0;
-  padding-left: 55px;
+  padding-left: 50px;
   padding-top: 40px;
   display: none;
   font-size: 70px;
+}
+
+/* line 431, ../sass/style.scss */
+#player {
+  display: none;
+  border-radius: none;
+}
+
+/* MediaElementJS */
+/* line 437, ../sass/style.scss */
+.mejs-controls {
+  display: none;
 }
