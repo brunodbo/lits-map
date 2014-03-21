@@ -18,9 +18,9 @@ var map = L.mapbox.map('map', mapId, {
   keyboard: false
 }).setView([54, -116.5], 6);
 
-// var baseLayers;
-// var overlays;
+var baseLayers;
+var overlays;
 
-// var layerControl = L.control.layers(baseLayers, overlays);
-// layerControl.setPosition('bottomleft');
-// layerControl.addTo(map);
+var layerControl = L.control.layers(baseLayers, overlays);
+layerControl.setPosition('bottomleft');
+layerControl.addTo(map);

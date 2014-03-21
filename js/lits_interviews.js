@@ -124,16 +124,16 @@ $(function() {
 
 
   // Add interviews layer to layer control.
-  // layerControl.addOverlay(interviews, 'Interviews');
-  // map.on('overlayremove', function(event) {
-  //   if (event.name == 'Interviews') {
-  //     $('#interviews-nav').hide();
-  //   }
-  // })
-  // map.on('overlayadd', function(event) {
-  //   if (event.name == 'Interviews') {
-  //     $('#interviews-nav').show();
-  //   }
-  // })
+  layerControl.addOverlay(interviews, 'Interviews');
+  map.on('overlayremove', function(event) {
+    if (event.name == 'Interviews') {
+      $('#interviews-nav').hide();
+    }
+  })
+  map.on('overlayadd', function(event) {
+    if (event.name == 'Interviews') {
+      $('#interviews-nav').show();
+    }
+  })
 });
 
