@@ -8,64 +8,73 @@ $(function() {
   //   return player;
   // }
 
-  var interviews = L.mapbox.markerLayer().addTo(map);
+  var remoteVideoBaseUrl = 'http://vimeo.com/',
+      iconDir = 'img/interviews/',
+      videoDir = 'video/',
+      interviews = L.mapbox.markerLayer().addTo(map);
   interviews.loadURL('js/lits_interviews_data.json');
   // Unbind default Leaflet popup content and set custom icon.
   interviews.on('layeradd', function(e) {
     var marker = e.layer,
-      feature = marker.feature;
+        feature = marker.feature,
+        featureId = feature.properties.id,
+        markerId = 'marker-' + featureId,
+        playerId = 'player-' + featureId,
+        markerTitle = marker.options.title + ', ' + feature.properties.intervieweeTitle + ', interviewed in ' + feature.properties.locationName,
+        icon = iconDir + feature.properties.icon,
+        videoWebm = videoDir + feature.properties.videoWebm,
+        videoMp4 = videoDir + feature.properties.videoMp4;
       // videoPlayer = videoPlayer(feature.properties.posterImg, feature.properties.fileWebm);
     marker.unbindPopup(marker._popup);
+    marker.options.title = markerTitle;
+    marker.options.riseOnHover = true;
     marker.setIcon(L.divIcon({
-      iconSize: [60, 60],
-      iconAnchor: [30, 30],
+      iconSize: [50, 50],
+      iconAnchor: [25, 25],
       className: 'marker-wrapper',
-      html: '<div class="marker-inner-wrapper"><img class="interview-thumb interview-marker" src="' + feature.properties.iconUrl + '" /><video id="player" class="interview-video player" width="175" height="175" poster="' + feature.properties.posterImg + '" preload="auto"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + feature.properties.fileWebm + '" /></video><i class="fa fa-play"></i></div>'
-      // html: '<div class="marker-inner-wrapper"><video id="player" width="175" height="175" poster="' + feature.properties.posterImg + '" preload="none"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + feature.properties.fileWebm + '" /></video></div>'
-      // html: '<div class="marker-inner-wrapper"><img class="interview-marker" src="' + feature.properties.iconUrl + '" /><i class="fa fa-play"></i>' + '<video width="175" height="175" poster="' + feature.properties.posterImg + '" preload="none"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + feature.properties.fileWebm + '" /></video></div>'
+      html: '<div id="' + markerId + '" class="marker-inner-wrapper"><img class="interview-thumb interview-marker" src="' + icon + '" /><video id="' + playerId + '" class="interview-video player" width="145" height="145" poster="' + icon + '" preload="auto"><!-- WebM/VP8 for Firefox4, Opera, and Chrome --><source type="video/webm" src="' + videoWebm + '" /><source type="video/mp4" src="' + videoMp4 + '" /></video><i class="fa fa-play"></i></div>'
     }));
   });
 
   interviews.on('ready', function(e) {
-    var markers = [],
-        feature,
-        player = new MediaElementPlayer('#player', {
-          loop: true,
-          enableKeyboard: false,
-          startVolume: 0
-        });
-
-
     this.eachLayer(function(marker) {
-      markers.push(marker);
-      feature = marker.feature;
-    });
-    cycle(markers);
-    $('.marker-wrapper').mouseenter(function() {
-      $(this).css('margin-left', -75);
-      $(this).css('margin-top', -75);
-      // player.setSrc(feature.properties.fileWebm);
-      player.play();
+      var feature = marker.feature,
+          featureId = feature.properties.id,
+          markerId = 'marker-' + featureId,
+          playerId = 'player-' + featureId,
+          player = new MediaElementPlayer('#' + playerId, {
+            loop: true,
+            enableKeyboard: false,
+            startVolume: 0
+          }),
+          vimeoUrl = remoteVideoBaseUrl + feature.properties.vimeoId;
 
-      $(this).find('.interview-thumb').hide();
-      $(this).find('.player').show();
-      $(this).find('.fa-play').show().css('z-index', 999);
-      // $(this).find('.interview-marker').attr('src', feature.properties.iconGifUrl);
-      $(this).mouseleave(function() {
-        $(this).css('margin-left', -30);
-        $(this).css('margin-top', -30);
-        $(this).find('.interview-thumb').show();
-        $(this).find('.player').hide();
-        $(this).find('.fa-play').hide();
-        player.pause();
-        // $(this).find('.interview-marker').attr('src', feature.properties.iconUrl);
+      $('#'+ markerId).mouseenter(function() {
+        var markerWrapper = $(this).parent('.marker-wrapper');
+        markerWrapper.css('margin-left', -65);
+        markerWrapper.css('margin-top', -65);
+
+        $(this).find('.interview-thumb').hide();
+        $(this).find('.player').show();
+        $(this).find('.fa-play')
+          .show()
+          .magnificPopup({
+            items: {
+              src: vimeoUrl
+            },
+            type: 'iframe'
+          });
+        player.setCurrentTime(0);
+        player.play();
+        $(this).mouseleave(function() {
+          markerWrapper.css('margin-left', -25);
+          markerWrapper.css('margin-top', -25);
+          $(this).find('.interview-thumb').show();
+          $(this).find('.player').hide();
+          $(this).find('.fa-play').hide();
+          player.pause();
+        });
       });
-    });
-    $('.fa-play').magnificPopup({
-      items: {
-        src: feature.properties.videoUrl
-      },
-      type: 'iframe'
     });
   });
 

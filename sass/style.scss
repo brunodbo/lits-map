@@ -1,4 +1,4 @@
-/* 
+/*
  * Main styles.
  */
 
@@ -356,7 +356,7 @@ html {
   li {
     display: inline-block;
   }
- 
+
   i {
     &:hover,
     &:focus,
@@ -380,7 +380,7 @@ html {
 
 .small-note {
   font-size: .9em;
-  font-style: italic;  
+  font-style: italic;
 }
 
 
@@ -395,15 +395,18 @@ html {
   &:hover,
   &:focus,
   &:active {
-    width: 150px !important;
-    height: 150px !important;
+    width: 145px !important;
+    height: 145px !important;
     .fa-play {
       display: block;
-      // background-color: red;
-      z-index: 999;
-      color: white;
-      opacity: .6;
     }
+  }
+}
+
+@-moz-document url-prefix() {
+  /* mozilla-only styles here */
+  .marker-wrapper {
+    border-radius: 0;
   }
 }
 
@@ -413,7 +416,8 @@ html {
 
 .marker-inner-wrapper,
 .interview-marker,
-.fa-play {
+.fa-play,
+.player {
   width: 100%;
   height: 100%;
 }
@@ -422,15 +426,19 @@ html {
   position: absolute;
   top: 0;
   left: 0;
+  // background-color: red;
+  z-index: 999;
+  color: white;
+  opacity: .6;
   padding-left: 50px;
   padding-top: 40px;
   display: none;
   font-size: 70px;
 }
 
-#player {
+.player {
   display: none;
-  border-radius: none;
+  // border-radius: none;
 }
 
 /* MediaElementJS */
