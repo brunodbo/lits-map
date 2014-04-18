@@ -1,4 +1,4 @@
-/* 
+/*
  * Main styles.
  */
 /* HTML element (SMACSS base) rules */
@@ -98,7 +98,7 @@
   cursor: auto;
 }
 
-/* line 182, ../sass/vendor/magnific_popup/_main.scss */
+/* line 179, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-close,
 .mfp-arrow,
 .mfp-preloader,
@@ -149,7 +149,7 @@
   display: none;
 }
 
-/* line 255, ../sass/vendor/magnific_popup/_main.scss */
+/* line 254, ../sass/vendor/magnific_popup/_main.scss */
 button.mfp-close, button.mfp-arrow {
   overflow: visible;
   cursor: pointer;
@@ -187,7 +187,7 @@ button::-moz-focus-inner {
   font-size: 28px;
   font-family: Arial, Baskerville, monospace;
 }
-/* line 298, ../sass/vendor/magnific_popup/_main.scss */
+/* line 297, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   filter: alpha(opacity=100);
@@ -233,18 +233,18 @@ button::-moz-focus-inner {
   padding: 0;
   width: 90px;
   height: 110px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 /* line 350, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-arrow:active {
   margin-top: -54px;
 }
-/* line 354, ../sass/vendor/magnific_popup/_main.scss */
+/* line 353, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-arrow:hover, .mfp-arrow:focus {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-/* line 363, ../sass/vendor/magnific_popup/_main.scss */
+/* line 360, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-arrow:before, .mfp-arrow:after,
 .mfp-arrow .mfp-b,
 .mfp-arrow .mfp-a {
@@ -259,14 +259,14 @@ button::-moz-focus-inner {
   margin-left: 35px;
   border: medium inset transparent;
 }
-/* line 377, ../sass/vendor/magnific_popup/_main.scss */
+/* line 376, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-arrow:after,
 .mfp-arrow .mfp-a {
   border-top-width: 13px;
   border-bottom-width: 13px;
   top: 8px;
 }
-/* line 385, ../sass/vendor/magnific_popup/_main.scss */
+/* line 384, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-arrow:before,
 .mfp-arrow .mfp-b {
   border-top-width: 21px;
@@ -278,13 +278,13 @@ button::-moz-focus-inner {
 .mfp-arrow-left {
   left: 0;
 }
-/* line 397, ../sass/vendor/magnific_popup/_main.scss */
+/* line 396, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-arrow-left:after,
 .mfp-arrow-left .mfp-a {
   border-right: 17px solid white;
   margin-left: 31px;
 }
-/* line 402, ../sass/vendor/magnific_popup/_main.scss */
+/* line 401, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-arrow-left:before,
 .mfp-arrow-left .mfp-b {
   margin-left: 25px;
@@ -295,13 +295,13 @@ button::-moz-focus-inner {
 .mfp-arrow-right {
   right: 0;
 }
-/* line 411, ../sass/vendor/magnific_popup/_main.scss */
+/* line 410, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-arrow-right:after,
 .mfp-arrow-right .mfp-a {
   border-left: 17px solid white;
   margin-left: 39px;
 }
-/* line 416, ../sass/vendor/magnific_popup/_main.scss */
+/* line 415, ../sass/vendor/magnific_popup/_main.scss */
 .mfp-arrow-right:before,
 .mfp-arrow-right .mfp-b {
   border-left: 27px solid #3f3f3f;
@@ -550,7 +550,7 @@ img.mfp-img {
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
-/* line 35, ../sass/_normalize.scss */
+/* line 25, ../sass/_normalize.scss */
 article,
 aside,
 details,
@@ -567,13 +567,13 @@ summary {
 
 /* line 39, ../sass/_normalize.scss */
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 /* Correct `inline-block` display not defined in IE 8/9. */
-/* line 46, ../sass/_normalize.scss */
+/* line 44, ../sass/_normalize.scss */
 audio,
 canvas,
 video {
@@ -666,13 +666,13 @@ body {
  * The order of link states are based on Eric Meyer's article:
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
-/* line 134, ../sass/_normalize.scss */
+/* line 133, ../sass/_normalize.scss */
 a:link, a:visited,
 .leaflet-container a:link,
 .leaflet-container a:visited {
   color: #7ab86f;
 }
-/* line 139, ../sass/_normalize.scss */
+/* line 137, ../sass/_normalize.scss */
 a:hover, a:focus, a:active,
 .leaflet-container a:hover,
 .leaflet-container a:focus,
@@ -692,7 +692,7 @@ a:focus {
 }
 
 /* Improve readability when focused and also mouse hovered in all browsers. */
-/* line 155, ../sass/_normalize.scss */
+/* line 154, ../sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -708,7 +708,7 @@ a:hover {
  * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
  */
 /* Set 1 unit of vertical rhythm on the top and bottom margin. */
-/* line 171, ../sass/_normalize.scss */
+/* line 170, ../sass/_normalize.scss */
 p,
 pre {
   margin: 1.71429em 0;
@@ -786,7 +786,7 @@ abbr[title] {
 }
 
 /* Address styling not present in Safari 5 and Chrome. */
-/* line 234, ../sass/_normalize.scss */
+/* line 232, ../sass/_normalize.scss */
 dfn,
 em,
 i {
@@ -796,8 +796,8 @@ i {
 /* Address differences between Firefox and other browsers. */
 /* line 239, ../sass/_normalize.scss */
 hr {
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   border: 1px solid #666;
@@ -813,7 +813,7 @@ mark {
 }
 
 /* Correct font family set oddly in Safari 5 and Chrome. */
-/* line 259, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -821,33 +821,30 @@ samp,
 tt,
 var {
   font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
-  _font-family: 'courier new', monospace;
   font-size: 1em;
   line-height: 1.71429em;
 }
 
 /* Improve readability of pre-formatted text in all browsers. */
-/* line 268, ../sass/_normalize.scss */
+/* line 265, ../sass/_normalize.scss */
 pre {
-  white-space: pre;
   white-space: pre-wrap;
-  word-wrap: break-word;
 }
 
 /* Set consistent quote types. */
-/* line 280, ../sass/_normalize.scss */
+/* line 270, ../sass/_normalize.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 /* Address inconsistent and variable font size in all browsers. */
-/* line 285, ../sass/_normalize.scss */
+/* line 275, ../sass/_normalize.scss */
 small {
   font-size: 80%;
 }
 
 /* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-/* line 291, ../sass/_normalize.scss */
+/* line 280, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -856,12 +853,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 297, ../sass/_normalize.scss */
+/* line 287, ../sass/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 300, ../sass/_normalize.scss */
+/* line 290, ../sass/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -869,7 +866,7 @@ sub {
 /**
  * Lists
  */
-/* line 310, ../sass/_normalize.scss */
+/* line 297, ../sass/_normalize.scss */
 dl,
 menu,
 ol,
@@ -878,7 +875,7 @@ ul {
   margin: 1.71429em 0;
 }
 
-/* line 317, ../sass/_normalize.scss */
+/* line 306, ../sass/_normalize.scss */
 ol ol,
 ol ul,
 ul ol,
@@ -887,14 +884,14 @@ ul ul {
   margin: 0;
 }
 
-/* line 322, ../sass/_normalize.scss */
+/* line 312, ../sass/_normalize.scss */
 dd {
   margin: 0 0 0 30px;
   /* LTR */
 }
 
 /* Address paddings set differently in IE 6/7. */
-/* line 329, ../sass/_normalize.scss */
+/* line 317, ../sass/_normalize.scss */
 menu,
 ol,
 ul {
@@ -902,42 +899,30 @@ ul {
   /* LTR */
 }
 
-/* Correct list images handled incorrectly in IE 7. */
-/* line 336, ../sass/_normalize.scss */
-nav ul,
-nav ol {
-  list-style: none;
-  list-style-image: none;
-}
-
 /**
  * Embedded content and figures
  *
  * @todo Look into adding responsive embedded video.
  */
-/* line 347, ../sass/_normalize.scss */
+/* line 328, ../sass/_normalize.scss */
 img {
   /* Remove border when inside `a` element in IE 8/9. */
   border: 0;
-  /* Improve image quality when scaled in IE 7. */
-  -ms-interpolation-mode: bicubic;
   /* Suppress the space beneath the baseline */
   /* vertical-align: bottom; */
   /* Responsive images */
   max-width: 100%;
   height: auto;
-  /* Correct IE 8 not scaling image height when resized. */
-  width: auto;
 }
 
 /* Correct overflow displayed oddly in IE 9. */
-/* line 368, ../sass/_normalize.scss */
+/* line 341, ../sass/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
 /* Address margin not present in IE 8/9 and Safari 5. */
-/* line 373, ../sass/_normalize.scss */
+/* line 346, ../sass/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -945,29 +930,23 @@ figure {
 /**
  * Forms
  */
-/* Correct margin displayed oddly in IE 6/7. */
-/* line 383, ../sass/_normalize.scss */
-form {
-  margin: 0;
-}
-
 /* Define consistent border, margin, and padding. */
-/* line 389, ../sass/_normalize.scss */
+/* line 355, ../sass/_normalize.scss */
 fieldset {
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
   border-color: #c0c0c0;
-  border-top-style: solid;
   border-top-width: 0.07143em;
+  border-top-style: solid;
   padding-top: 0.52857em;
-  border-bottom-style: solid;
   border-bottom-width: 0.07143em;
+  border-bottom-style: solid;
   padding-bottom: 1.04286em;
-  border-left-style: solid;
   border-left-width: 0.07143em;
+  border-left-style: solid;
   padding-left: 1.04286em;
-  border-right-style: solid;
   border-right-width: 0.07143em;
+  border-right-style: solid;
   padding-right: 1.04286em;
 }
 
@@ -976,15 +955,12 @@ fieldset {
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-/* line 404, ../sass/_normalize.scss */
+/* line 370, ../sass/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
   padding: 0;
   /* 2 */
-  *margin-left: -7px;
-  /* 3 */
-  /* LTR */
 }
 
 /**
@@ -994,7 +970,7 @@ legend {
  * 4. Improve appearance and consistency with IE 6/7.
  * 5. Keep form elements constrained in their containers.
  */
-/* line 422, ../sass/_normalize.scss */
+/* line 382, ../sass/_normalize.scss */
 button,
 input,
 select,
@@ -1005,10 +981,6 @@ textarea {
   /* 2 */
   margin: 0;
   /* 3 */
-  vertical-align: baseline;
-  /* 4 */
-  *vertical-align: middle;
-  /* 4 */
   max-width: 100%;
   /* 5 */
 }
@@ -1017,7 +989,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 439, ../sass/_normalize.scss */
+/* line 397, ../sass/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -1029,7 +1001,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 450, ../sass/_normalize.scss */
+/* line 408, ../sass/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -1044,7 +1016,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 466, ../sass/_normalize.scss */
+/* line 422, ../sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -1053,14 +1025,12 @@ input[type="submit"] {
   /* 2 */
   cursor: pointer;
   /* 3 */
-  *overflow: visible;
-  /* 4 */
 }
 
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 478, ../sass/_normalize.scss */
+/* line 433, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -1072,15 +1042,11 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 489, ../sass/_normalize.scss */
+/* line 444, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
   /* 2 */
-  *height: 13px;
-  /* 3 */
-  *width: 13px;
-  /* 3 */
 }
 
 /**
@@ -1088,12 +1054,12 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 503, ../sass/_normalize.scss */
+/* line 455, ../sass/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
 }
@@ -1102,14 +1068,14 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 513, ../sass/_normalize.scss */
+/* line 464, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /* Remove inner padding and border in Firefox 4+. */
-/* line 519, ../sass/_normalize.scss */
+/* line 470, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -1120,7 +1086,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 528, ../sass/_normalize.scss */
+/* line 480, ../sass/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -1129,7 +1095,7 @@ textarea {
 }
 
 /* Form labels. */
-/* line 534, ../sass/_normalize.scss */
+/* line 486, ../sass/_normalize.scss */
 label {
   display: block;
   font-weight: bold;
@@ -1138,7 +1104,7 @@ label {
 /**
  * Tables
  */
-/* line 542, ../sass/_normalize.scss */
+/* line 494, ../sass/_normalize.scss */
 table {
   /* Remove most spacing between table cells. */
   border-collapse: collapse;
@@ -1217,18 +1183,16 @@ html {
   line-height: 1.5em;
 }
 
-/* line 76, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 #sidebar,
 .map-legend {
-  -webkit-box-shadow: 0px 0px 5px #333333;
-  -moz-box-shadow: 0px 0px 5px #333333;
-  box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 5px #333333;
+  -webkit-box-shadow: 0px 5px #333333;
+  box-shadow: 0px 5px #333333;
   background-color: rgba(153, 153, 153, 0.95);
   color: white;
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 
@@ -1253,7 +1217,7 @@ html {
   font-size: 1.28571em;
   margin-bottom: 0;
 }
-/* line 104, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .leaflet-popup .post-title a:link,
 .leaflet-popup .post-title a:visited {
   color: #333333;
@@ -1497,9 +1461,9 @@ html {
 
 /* line 303, ../sass/style.scss */
 .map-legend {
-  -webkit-box-shadow: 0px 0px 5px #333333;
-  -moz-box-shadow: 0px 0px 5px #333333;
-  box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 5px #333333;
+  -webkit-box-shadow: 0px 5px #333333;
+  box-shadow: 0px 5px #333333;
 }
 
 /* line 306, ../sass/style.scss */
@@ -1551,7 +1515,7 @@ html {
   font-size: 16.38px;
 }
 
-/* line 350, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 #interviews-nav,
 #posts-nav {
   text-align: center;
@@ -1568,7 +1532,7 @@ html {
 #posts-nav li {
   display: inline-block;
 }
-/* line 364, ../sass/style.scss */
+/* line 361, ../sass/style.scss */
 #interviews-nav i:hover, #interviews-nav i:focus, #interviews-nav i:active, #interviews-nav i.active,
 #posts-nav i:hover,
 #posts-nav i:focus,
@@ -1578,13 +1542,13 @@ html {
   cursor: pointer;
 }
 
-/* line 372, ../sass/style.scss */
+/* line 371, ../sass/style.scss */
 #interviews-nav-left,
 #posts-nav-left {
   margin-right: 10px;
 }
 
-/* line 377, ../sass/style.scss */
+/* line 376, ../sass/style.scss */
 #interviews-nav-right,
 #posts-nav-right {
   margin-left: 10px;
@@ -1603,51 +1567,58 @@ html {
   border-radius: 50%;
   transition: width .3s, height .3s, margin .3s;
 }
-/* line 397, ../sass/style.scss */
+/* line 395, ../sass/style.scss */
 .marker-wrapper:hover, .marker-wrapper:focus, .marker-wrapper:active {
-  width: 150px !important;
-  height: 150px !important;
+  width: 145px !important;
+  height: 145px !important;
 }
 /* line 400, ../sass/style.scss */
 .marker-wrapper:hover .fa-play, .marker-wrapper:focus .fa-play, .marker-wrapper:active .fa-play {
   display: block;
-  z-index: 999;
-  color: white;
-  opacity: .6;
 }
 
-/* line 410, ../sass/style.scss */
+@-moz-document url-prefix() {
+  /* mozilla-only styles here */
+  /* line 408, ../sass/style.scss */
+  .marker-wrapper {
+    border-radius: 0;
+  }
+}
+/* line 413, ../sass/style.scss */
 .marker-inner-wrapper {
   position: relative;
 }
 
-/* line 416, ../sass/style.scss */
+/* line 417, ../sass/style.scss */
 .marker-inner-wrapper,
 .interview-marker,
-.fa-play {
+.fa-play,
+.player {
   width: 100%;
   height: 100%;
 }
 
-/* line 421, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 .fa-play {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 999;
+  color: white;
+  opacity: .6;
   padding-left: 50px;
   padding-top: 40px;
   display: none;
   font-size: 70px;
 }
 
-/* line 431, ../sass/style.scss */
-#player {
+/* line 439, ../sass/style.scss */
+.player {
   display: none;
-  border-radius: none;
 }
 
 /* MediaElementJS */
-/* line 437, ../sass/style.scss */
+/* line 445, ../sass/style.scss */
 .mejs-controls {
   display: none;
 }

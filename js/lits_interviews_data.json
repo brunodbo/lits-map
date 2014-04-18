@@ -3,17 +3,194 @@
   "features": [
     { "type": "Feature",
       "properties": {
-        "title": "Differing Views on the Northern Gateway Pipeline: Bruderheim to Mayerthorpe",
-        "iconUrl": "img/interviews/li_thumb_01.jpg",
-        "iconGifUrl": "img/interviews/interview_gif_01.gif",
-        "posterImg": "img/interviews/li_thumb_01.jpg",
-        "fileWebm": "video/karl_mattson_clip.webm",
-        "videoUrl": "http://vimeo.com/81702484",
-        "location_name": "Bruderheim"
+        "id": "01",
+        "title": "Donald Prince",
+        "intervieweeTitle": "former oil worker",
+        "icon": "dp.jpg",
+        "videoWebm": "dp.webm",
+        "videoMp4": "dp.mp4",
+        "vimeoId": "81694203",
+        "locationName": "Lake Babine, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-126.616667, 55.316667]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "02",
+        "title": "Karl Mattson",
+        "intervieweeTitle": "rancher",
+        "icon": "km.jpg",
+        "videoWebm": "km.webm",
+        "videoMp4": "km.mp4",
+        "vimeoId": "81702484",
+        "locationName": "Rolla, BC"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [-120.1404947, 55.8979859]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "03",
+        "title": "Des Nobels",
+        "intervieweeTitle": "fisherman",
+        "icon": "dn.jpg",
+        "videoWebm": "dn.webm",
+        "videoMp4": "dn.mp4",
+        "vimeoId": "81693730",
+        "locationName": "Prince Rupert, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-130.3255345,  54.312617]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "04",
+        "title": "Annie Booth",
+        "intervieweeTitle": "professor",
+        "icon": "ab.jpg",
+        "videoWebm": "ab.webm",
+        "videoMp4": "ab.mp4",
+        "vimeoId": "81692947",
+        "locationName": "Prince George, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-123, 54.05]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "05",
+        "title": "Freda Huson",
+        "intervieweeTitle": "Unis'tot'en spokesperson",
+        "icon": "fh.jpg",
+        "videoWebm": "fh.webm",
+        "videoMp4": "fh.mp4",
+        "vimeoId": "81711987",
+        "locationName": "Moricetown, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-127.333333, 55.033333]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "06",
+        "title": "John Phair",
+        "intervieweeTitle": "educator",
+        "icon": "jp.jpg",
+        "videoWebm": "jp.webm",
+        "videoMp4": "jp.mp4",
+        "vimeoId": "86570086",
+        "locationName": "Burns Lake, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-125.7637872, 54.2331691]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "07",
+        "title": "Katrin Maclean",
+        "intervieweeTitle": "forester",
+        "icon": "kmc.jpg",
+        "videoWebm": "kmc.webm",
+        "videoMp4": "kmc.mp4",
+        "vimeoId": "81708832",
+        "locationName": "Fort Fraser, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-124.533333, 54.05]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "08",
+        "title": "Zoe Meletis",
+        "intervieweeTitle": "professor",
+        "icon": "zm.jpg",
+        "videoWebm": "zm.webm",
+        "videoMp4": "zm.mp4",
+        "vimeoId": "81705170",
+        "locationName": "Prince George, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.5, 54]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "09",
+        "title": "Patrick Shannon",
+        "intervieweeTitle": "film maker",
+        "icon": "ps.jpg",
+        "videoWebm": "ps.webm",
+        "videoMp4": "ps.mp4",
+        "vimeoId": "81697545",
+        "locationName": "Skidegate, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-132, 53.25]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "10",
+        "title": "Sylvia Thomas",
+        "intervieweeTitle": "receptionist",
+        "icon": "st.jpg",
+        "videoWebm": "st.webm",
+        "videoMp4": "st.mp4",
+        "vimeoId": "81691562",
+        "locationName": "Grassy Plains, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-125.883333, 53.95]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "11",
+        "title": "Nadia Nowak",
+        "intervieweeTitle": "community organizer",
+        "icon": "nn.jpg",
+        "videoWebm": "nn.webm",
+        "videoMp4": "nn.mp4",
+        "vimeoId": "81695445",
+        "locationName": "Smithers, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-127.1702191, 54.7830205]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "12",
+        "title": "David King",
+        "intervieweeTitle": "biologist",
+        "icon": "dk.jpg",
+        "videoWebm": "dk.webm",
+        "videoMp4": "dk.mp4",
+        "vimeoId": "81696535",
+        "locationName": "The Ancient Forest Trail, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.227479930037, 53.76269315]
       }
     }
   ]
