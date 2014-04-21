@@ -16,11 +16,4 @@ var map = L.mapbox.map('map', mapId, {
   maxZoom: 8,
   maxBounds: L.latLngBounds(L.latLng(49.15296, -135.7470), L.latLng(59.9660, -99.3823)),
   keyboard: false
-}).setView([54, -116.5], 6);
-
-var baseLayers;
-var overlays;
-
-var layerControl = L.control.layers(baseLayers, overlays);
-layerControl.setPosition('bottomleft');
-layerControl.addTo(map);
+}).setView([54, -123.5], 6);

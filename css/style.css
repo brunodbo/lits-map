@@ -1117,479 +1117,67 @@ table {
 }
 
 /* Body */
-/* line 11, ../sass/style.scss */
+/* line 10, ../sass/style.scss */
 body {
   padding: 0px;
   margin: 0px;
   height: 100%;
 }
 
-/* line 17, ../sass/style.scss */
+/* line 16, ../sass/style.scss */
 html {
   height: 100%;
 }
 
-/* line 21, ../sass/style.scss */
-.btn {
-  -webkit-user-select: none;
-  /* Chrome all / Safari all */
-  -moz-user-select: none;
-  /* Firefox all */
-  -ms-user-select: none;
-  /* IE 10+ */
-  -o-user-select: none;
-  user-select: none;
-}
-
-/* Social links */
-/* line 35, ../sass/style.scss */
-#share ul {
-  margin: 0px;
-}
-/* line 38, ../sass/style.scss */
-#share li {
-  list-style: none;
-}
-
 /* Map */
-/* line 45, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 #map {
   position: absolute;
-  /*float: left;*/
   top: 0;
   height: 100%;
   width: 100%;
   z-index: 7;
 }
 
-/* Sidebar */
-/* line 56, ../sass/style.scss */
-#sidebar {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30%;
-  z-index: 10;
-}
-
-/* line 66, ../sass/style.scss */
-#sidebar-inner {
-  padding: 10px;
-}
-
-/* line 70, ../sass/style.scss */
-.sidebar-title {
-  margin: 0;
-  line-height: 1.5em;
-}
-
-/* line 75, ../sass/style.scss */
-#sidebar,
-.map-legend {
-  -moz-box-shadow: 0px 5px #333333;
-  -webkit-box-shadow: 0px 5px #333333;
-  box-shadow: 0px 5px #333333;
-  background-color: rgba(153, 153, 153, 0.95);
-  color: white;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-}
-
-/* line 85, ../sass/style.scss */
-.more-info-title {
-  margin-bottom: 0;
-}
-
-/* line 89, ../sass/style.scss */
-.more-info-list {
-  margin-top: 0;
-}
-
-/* Pop-up information */
-/* line 95, ../sass/style.scss */
-.popup_box_header {
-  font-size: 16px;
-}
-
-/* line 100, ../sass/style.scss */
-.leaflet-popup .post-title {
-  font-size: 1.28571em;
-  margin-bottom: 0;
-}
-/* line 103, ../sass/style.scss */
-.leaflet-popup .post-title a:link,
-.leaflet-popup .post-title a:visited {
-  color: #333333;
-}
-/* line 108, ../sass/style.scss */
-.leaflet-popup .post-img {
-  max-width: 100% !important;
-}
-/* line 111, ../sass/style.scss */
-.leaflet-popup p {
-  margin: 0;
-}
-
-/* Credits */
-/* line 118, ../sass/style.scss */
-.credits {
-  font-size: 9px;
-}
-
-/* 'About this map' button, description box */
-/* Mobile only */
-/* line 125, ../sass/style.scss */
-.toggle_description {
-  display: none;
-  z-index: 9;
-  position: relative;
-  float: right;
-  right: 0%;
-  top: 0%;
-}
-
-/* line 134, ../sass/style.scss */
-.description_box_cover {
-  display: none;
-  z-index: 12;
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: #333333;
-  background-color: rgba(33, 33, 33, 0.9);
-}
-
-/* line 145, ../sass/style.scss */
-.description_box {
-  position: absolute;
-  display: none;
-  z-index: 13;
-  height: 96%;
-  width: 96%;
-  left: 1%;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-top: 1%;
-  top: 1%;
-  background-color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #999;
-}
-/* line 159, ../sass/style.scss */
-.description_box h3 {
-  padding-bottom: 0px;
-  line-height: 15px;
-}
-
-/* line 165, ../sass/style.scss */
-.description_box_content {
-  width: 96%;
-  height: 80%;
-  position: fixed;
-  overflow: auto;
-}
-
-/* line 172, ../sass/style.scss */
-.x_button {
-  width: 15px;
-}
-
-/* Styles for smaller screens */
-@media (max-width: 700px) {
-  /* line 178, ../sass/style.scss */
-  h2 {
-    font-size: 24px;
-  }
-
-  /* line 181, ../sass/style.scss */
-  h3 {
-    font-size: 18px;
-  }
-
-  /* line 184, ../sass/style.scss */
-  p {
-    font-size: 13px;
-  }
-}
-/* Styles from mobile devices */
-@media (max-width: 625px) {
-  /* Headers */
-  /* line 192, ../sass/style.scss */
-  h1, h2, h3 {
-    line-height: 20px;
-  }
-
-  /* Map */
-  /* line 196, ../sass/style.scss */
-  #map {
-    cursor: default;
-    border: 0px solid #737373;
-    top: 0%;
-    bottom: 0%;
-    height: 100%;
-    width: 100%;
-  }
-
-  /* Social buttons */
-  /* line 205, ../sass/style.scss */
-  #share {
-    display: none;
-  }
-
-  /* Sidebar */
-  /* line 209, ../sass/style.scss */
-  #sidebar {
-    position: relative;
-    border-width: 0 0 1px;
-    border-bottom: 1px solid #FFFFFF;
-    margin-top: 0%;
-    float: left;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    padding-left: 2%;
-    padding-right: 2%;
-    width: 96%;
-    height: auto;
-  }
-  /* line 222, ../sass/style.scss */
-  #sidebar h3 {
-    line-height: 15px;
-    font-size: 20px;
-  }
-
-  /* line 227, ../sass/style.scss */
-  .sidebar_content {
-    display: none;
-  }
-
-  /* line 230, ../sass/style.scss */
-  .description_box_header h3 {
-    line-height: 25px;
-  }
-
-  /* line 233, ../sass/style.scss */
-  .toggle_description {
-    display: inline;
-  }
-
-  /* Leaflet controls */
-  /* line 237, ../sass/style.scss */
-  .leaflet-top {
-    margin-top: 55px;
-  }
-
-  /* line 240, ../sass/style.scss */
-  .leaflet-right {
-    display: none;
-  }
-
-  /* line 244, ../sass/style.scss */
-  .leaflet-container .leaflet-control-attribution, .leaflet-container .leaflet-control-scale {
-    font-size: 10px;
-  }
-
-  /* line 248, ../sass/style.scss */
-  .leaflet-bar {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-  }
-}
-/* Special attributes for small, wide screens */
-@media (max-height: 500px) {
-  /* line 255, ../sass/style.scss */
-  #scroll_more {
-    display: block;
-  }
-
-  /* line 258, ../sass/style.scss */
-  .sidebar_content {
-    height: 60%;
-  }
-
-  /* line 261, ../sass/style.scss */
-  .description_box_content {
-    height: 75%;
-  }
-}
-@media (max-height: 400px) {
-  /* line 267, ../sass/style.scss */
-  #scroll_more {
-    display: block;
-  }
-
-  /* line 270, ../sass/style.scss */
-  .sidebar_content {
-    height: 60%;
-  }
-
-  /* line 273, ../sass/style.scss */
-  .description_box_content {
-    height: 75%;
-  }
-}
-@media (max-height: 320px) {
-  /* line 279, ../sass/style.scss */
-  .sidebar_content {
-    height: 40%;
-  }
-
-  /* line 282, ../sass/style.scss */
-  .description_box_content {
-    height: 65%;
-  }
-}
-/* line 287, ../sass/style.scss */
-.leaflet-bottom {
-  width: 30%;
-}
-/* line 289, ../sass/style.scss */
-.leaflet-bottom .map-legends {
-  width: 100%;
-  font-size: 0.85em;
-}
-
-/* line 295, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 .leaflet-container {
   color: #333;
 }
-/* line 297, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 .leaflet-container h5 {
   margin-bottom: 0;
 }
 
-/* line 303, ../sass/style.scss */
-.map-legend {
-  -moz-box-shadow: 0px 5px #333333;
-  -webkit-box-shadow: 0px 5px #333333;
-  box-shadow: 0px 5px #333333;
-}
-
-/* line 306, ../sass/style.scss */
-.legend-title {
-  margin: 0;
-}
-
-/* line 310, ../sass/style.scss */
-.legend-items {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 316, ../sass/style.scss */
-.legend-icon {
-  display: inline-block;
-  margin-right: 15px;
-  margin-left: 5px;
-  width: 10px;
-  height: 10px;
-}
-
-/* line 325, ../sass/style.scss */
-.legend-risk .legend-icon {
-  background: url(../img/marker_sm.png) no-repeat left top;
-  height: 30px;
-  width: 20px;
-  margin-left: 0;
-  margin-right: 10px;
-}
-/* line 332, ../sass/style.scss */
-.legend-risk .legend-label {
-  vertical-align: top;
-}
-
-/* line 337, ../sass/style.scss */
-.legend-route .legend-icon {
-  background-color: #122128;
-}
-
-/* line 341, ../sass/style.scss */
-.legend-park .legend-icon {
-  background-color: #19851c;
-}
-
-/* line 345, ../sass/style.scss */
-.marker-title {
-  font-size: 16.38px;
-}
-
-/* line 349, ../sass/style.scss */
-#interviews-nav,
-#posts-nav {
-  text-align: center;
-}
-/* line 352, ../sass/style.scss */
-#interviews-nav ul,
-#posts-nav ul {
-  overflow: hidden;
-  *zoom: 1;
-  padding-left: 0;
-}
-/* line 356, ../sass/style.scss */
-#interviews-nav li,
-#posts-nav li {
-  display: inline-block;
-}
-/* line 361, ../sass/style.scss */
-#interviews-nav i:hover, #interviews-nav i:focus, #interviews-nav i:active, #interviews-nav i.active,
-#posts-nav i:hover,
-#posts-nav i:focus,
-#posts-nav i:active,
-#posts-nav i.active {
-  color: #7ab86f;
-  cursor: pointer;
-}
-
-/* line 371, ../sass/style.scss */
-#interviews-nav-left,
-#posts-nav-left {
-  margin-right: 10px;
-}
-
-/* line 376, ../sass/style.scss */
-#interviews-nav-right,
-#posts-nav-right {
-  margin-left: 10px;
-}
-
-/* line 381, ../sass/style.scss */
-.small-note {
-  font-size: .9em;
-  font-style: italic;
-}
-
-/* line 387, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 .marker-wrapper {
   overflow: hidden;
   border: 2px solid white;
   border-radius: 50%;
   transition: width .3s, height .3s, margin .3s;
 }
-/* line 395, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 .marker-wrapper:hover, .marker-wrapper:focus, .marker-wrapper:active {
   width: 145px !important;
   height: 145px !important;
 }
-/* line 400, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 .marker-wrapper:hover .fa-play, .marker-wrapper:focus .fa-play, .marker-wrapper:active .fa-play {
   display: block;
 }
 
 @-moz-document url-prefix() {
   /* mozilla-only styles here */
-  /* line 408, ../sass/style.scss */
+  /* line 54, ../sass/style.scss */
   .marker-wrapper {
     border-radius: 0;
   }
 }
-/* line 413, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .marker-inner-wrapper {
   position: relative;
 }
 
-/* line 417, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 .marker-inner-wrapper,
 .interview-marker,
 .fa-play,
@@ -1598,7 +1186,7 @@ html {
   height: 100%;
 }
 
-/* line 425, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 .fa-play {
   position: absolute;
   top: 0;
@@ -1612,13 +1200,13 @@ html {
   font-size: 70px;
 }
 
-/* line 439, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .player {
   display: none;
 }
 
 /* MediaElementJS */
-/* line 445, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .mejs-controls {
   display: none;
 }
