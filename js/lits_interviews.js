@@ -20,7 +20,7 @@ $(function() {
         featureId = feature.properties.id,
         markerId = 'marker-' + featureId,
         playerId = 'player-' + featureId,
-        markerTitle = marker.options.title + ', ' + feature.properties.intervieweeTitle + ', interviewed in ' + feature.properties.locationName,
+        markerTitle = marker.options.title + ', ' + feature.properties.intervieweeTitle + ', ' + feature.properties.locationName,
         icon = iconDir + feature.properties.icon,
         videoWebm = videoDir + feature.properties.videoWebm,
         videoMp4 = videoDir + feature.properties.videoMp4;

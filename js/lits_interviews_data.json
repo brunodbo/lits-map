@@ -192,6 +192,134 @@
         "type": "Point",
         "coordinates": [-121.227479930037, 53.76269315]
       }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "13",
+        "title": "Carmen Langer",
+        "intervieweeTitle": "rancher",
+        "icon": "cl.jpg",
+        "videoWebm": "cl.webm",
+        "videoMp4": "cl.mp4",
+        "vimeoId": "92904065",
+        "locationName": "The Ancient Forest Trail, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.227479930037, 53.76269315]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "14",
+        "title": "Terry Teegee",
+        "intervieweeTitle": "Grand Chief, carrier Sekani",
+        "icon": "tt.jpg",
+        "videoWebm": "tt.webm",
+        "videoMp4": "tt.mp4",
+        "vimeoId": "92903806",
+        "locationName": "The Ancient Forest Trail, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.227479930037, 53.76269315]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "15",
+        "title": "Teresa Ross",
+        "intervieweeTitle": "Haisla administrator",
+        "icon": "tr.jpg",
+        "videoWebm": "tr.webm",
+        "videoMp4": "tr.mp4",
+        "vimeoId": "92903805",
+        "locationName": "The Ancient Forest Trail, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.227479930037, 53.76269315]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "16",
+        "title": "Jay Coulson",
+        "intervieweeTitle": "farmer",
+        "icon": "jc.jpg",
+        "videoWebm": "jc.webm",
+        "videoMp4": "jc.mp4",
+        "vimeoId": "92899847",
+        "locationName": "The Ancient Forest Trail, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.227479930037, 53.76269315]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "17",
+        "title": "Bruce Hill",
+        "intervieweeTitle": "community organizer",
+        "icon": "bh.jpg",
+        "videoWebm": "bh.webm",
+        "videoMp4": "bh.mp4",
+        "vimeoId": "92899846",
+        "locationName": "The Ancient Forest Trail, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.227479930037, 53.76269315]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "18",
+        "title": "Brian Gunn",
+        "intervieweeTitle": "engineer",
+        "icon": "bg.jpg",
+        "videoWebm": "bg.webm",
+        "videoMp4": "bg.mp4",
+        "vimeoId": "92899844",
+        "locationName": "The Ancient Forest Trail, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.227479930037, 53.76269315]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "19",
+        "title": "Beate Marquardt",
+        "intervieweeTitle": "sculptor",
+        "icon": "bm.jpg",
+        "videoWebm": "bm.webm",
+        "videoMp4": "bm.mp4",
+        "vimeoId": "92899843",
+        "locationName": "The Ancient Forest Trail, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.227479930037, 53.76269315]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "20",
+        "title": "Art Fredeen",
+        "intervieweeTitle": "ecophysiologist",
+        "icon": "af.jpg",
+        "videoWebm": "af.webm",
+        "videoMp4": "af.mp4",
+        "vimeoId": "92899839",
+        "locationName": "The Ancient Forest Trail, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.227479930037, 53.76269315]
+      }
     }
   ]
 }
