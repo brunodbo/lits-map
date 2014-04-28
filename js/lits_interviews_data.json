@@ -62,7 +62,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-123, 54.05]
+        "coordinates": [-123.15, 54.15]
       }
     },
     { "type": "Feature",
@@ -78,7 +78,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-127.333333, 55.033333]
+        "coordinates": [-127.73333, 55.333333]
       }
     },
     { "type": "Feature",
@@ -94,7 +94,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-125.7637872, 54.2331691]
+        "coordinates": [-126.0637872, 54.4331691]
       }
     },
     { "type": "Feature",
@@ -111,22 +111,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [-124.533333, 54.05]
-      }
-    },
-    { "type": "Feature",
-      "properties": {
-        "id": "08",
-        "title": "Zoe Meletis",
-        "intervieweeTitle": "professor",
-        "icon": "zm.jpg",
-        "videoWebm": "zm.webm",
-        "videoMp4": "zm.mp4",
-        "vimeoId": "81705170",
-        "locationName": "Prince George, BC"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-122.5, 54]
       }
     },
     { "type": "Feature",
@@ -202,11 +186,11 @@
         "videoWebm": "cl.webm",
         "videoMp4": "cl.mp4",
         "vimeoId": "92904065",
-        "locationName": "The Ancient Forest Trail, BC"
+        "locationName": "Peace River, AB"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-121.227479930037, 53.76269315]
+        "coordinates": [-117.2910839, 56.2337111]
       }
     },
     { "type": "Feature",
@@ -218,11 +202,11 @@
         "videoWebm": "tt.webm",
         "videoMp4": "tt.mp4",
         "vimeoId": "92903806",
-        "locationName": "The Ancient Forest Trail, BC"
+        "locationName": "Prince George, BC"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-121.227479930037, 53.76269315]
+        "coordinates": [-122.4, 53.45]
       }
     },
     { "type": "Feature",
@@ -234,11 +218,11 @@
         "videoWebm": "tr.webm",
         "videoMp4": "tr.mp4",
         "vimeoId": "92903805",
-        "locationName": "The Ancient Forest Trail, BC"
+        "locationName": "Kitimat, BC"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-121.227479930037, 53.76269315]
+        "coordinates": [-128.6869838, 54.0159896]
       }
     },
     { "type": "Feature",
@@ -250,11 +234,11 @@
         "videoWebm": "jc.webm",
         "videoMp4": "jc.mp4",
         "vimeoId": "92899847",
-        "locationName": "The Ancient Forest Trail, BC"
+        "locationName": "Sangudo, AB"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-121.227479930037, 53.76269315]
+        "coordinates": [-114.896425, 53.8863436]
       }
     },
     { "type": "Feature",
@@ -266,11 +250,11 @@
         "videoWebm": "bh.webm",
         "videoMp4": "bh.mp4",
         "vimeoId": "92899846",
-        "locationName": "The Ancient Forest Trail, BC"
+        "locationName": "Terrace, BC"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-121.227479930037, 53.76269315]
+        "coordinates": [-128.6060566, 54.5205722]
       }
     },
     { "type": "Feature",
@@ -282,11 +266,11 @@
         "videoWebm": "bg.webm",
         "videoMp4": "bg.mp4",
         "vimeoId": "92899844",
-        "locationName": "The Ancient Forest Trail, BC"
+        "locationName": "Campbell River, BC"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-121.227479930037, 53.76269315]
+        "coordinates": [-125.2440905, 50.0231613]
       }
     },
     { "type": "Feature",
@@ -298,11 +282,11 @@
         "videoWebm": "bm.webm",
         "videoMp4": "bm.mp4",
         "vimeoId": "92899843",
-        "locationName": "The Ancient Forest Trail, BC"
+        "locationName": "Burns Lake, BC"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-121.227479930037, 53.76269315]
+        "coordinates": [-125.2637872, 54.7331691]
       }
     },
     { "type": "Feature",
@@ -314,11 +298,27 @@
         "videoWebm": "af.webm",
         "videoMp4": "af.mp4",
         "vimeoId": "92899839",
-        "locationName": "The Ancient Forest Trail, BC"
+        "locationName": "Prince George, BC"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-121.227479930037, 53.76269315]
+        "coordinates": [-123.25, 53.65]
+      }
+    },
+    { "type": "Feature",
+      "properties": {
+        "id": "08",
+        "title": "Zoe Meletis",
+        "intervieweeTitle": "professor",
+        "icon": "zm.jpg",
+        "videoWebm": "zm.webm",
+        "videoMp4": "zm.mp4",
+        "vimeoId": "81705170",
+        "locationName": "Prince George, BC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.5, 54]
       }
     }
   ]
